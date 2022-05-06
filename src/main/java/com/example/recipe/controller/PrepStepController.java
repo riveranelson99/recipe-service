@@ -15,7 +15,7 @@ public class PrepStepController {
     @Autowired
     PrepStepRepository repo;
 
-    @PostMapping("/prepsteps")
+    @PutMapping("/prepsteps")
     public void updatePrepStep(@RequestBody PrepStep prepStep) { repo.save(prepStep); }
 
     @PostMapping("/prepsteps")

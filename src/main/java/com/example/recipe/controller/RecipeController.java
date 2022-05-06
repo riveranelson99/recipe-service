@@ -15,7 +15,7 @@ public class RecipeController {
     @Autowired
     RecipeRepository recipeRepo;
 
-    @PostMapping("/recipes")
+    @PutMapping("/recipes")
     public void updateRecipe(@RequestBody Recipe recipe) { recipeRepo.save(recipe); }
 
     @PostMapping("/recipes")

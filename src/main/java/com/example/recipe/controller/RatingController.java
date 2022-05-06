@@ -15,7 +15,7 @@ public class RatingController {
     @Autowired
     RatingRepository repo;
 
-    @PostMapping("/ratings")
+    @PutMapping("/ratings")
     public void updateRating(@RequestBody Rating rating) { repo.save(rating); }
 
     @PostMapping("/ratings")
