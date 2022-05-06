@@ -15,6 +15,9 @@ public class RecipeController {
     @Autowired
     RecipeRepository recipeRepo;
 
+    @GetMapping("/recipes")
+    public List<Recipe> getAllRecipes() { return recipeRepo.findAll(); }
+
     @PutMapping("/recipes")
     public void updateRecipe(@RequestBody Recipe recipe) { recipeRepo.save(recipe); }
 
