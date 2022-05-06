@@ -27,7 +27,7 @@ public class PrepStepController {
         return repo.findAllPrepStepsByRecipeId(id);
     }
 
-    @GetMapping("prepsteps/{id}")
+    @GetMapping("/prepsteps/{id}")
     public PrepStep getPrepStep(@PathVariable Integer id) {
         Optional<PrepStep> returnVal = repo.findById(id);
         if (returnVal.isPresent()) {

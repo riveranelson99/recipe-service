@@ -27,7 +27,7 @@ public class RatingController {
         return repo.findAllRatingsByRecipeId(id);
     }
 
-    @GetMapping("ratings/{id}")
+    @GetMapping("/ratings/{id}")
     public Rating getRating(@PathVariable Integer id) {
         Optional<Rating> returnVal = repo.findById(id);
         if (returnVal.isPresent()) {

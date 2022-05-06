@@ -27,7 +27,7 @@ public class RecipeController {
         return recipeRepo.findAllRecipesByCategory(category);
     }
 
-    @GetMapping("recipes/{id}")
+    @GetMapping("/recipes/{id}")
     public Recipe getRecipe(@PathVariable Integer id) {
         Optional<Recipe> returnVal = recipeRepo.findById(id);
         if (returnVal.isPresent()) {
